@@ -1,21 +1,30 @@
 from django.db import models
 
 class Tamano(models.Model):
-    elID = models.PositiveSmallIntegerField()
+    elID = models.IntegerField()
     nombre = models.CharField(max_length=75)
     multiplicador = models.FloatField()
 
+    def __str__(self):
+            return '[ID:' + str(self.elID) + ']' + '[' + self.nombre + ']'
 
+    # El str(variable) es un casteo a convertirlo a string
 
 class TipoPan(models.Model):
     elID = models.PositiveSmallIntegerField()
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
 
+    def __str__(self):
+            return '[' + self.nombre + ']'
+
 class AditivosPan(models.Model):
     elID = models.PositiveSmallIntegerField()
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
+
+    def __str__(self):
+            return '[' + self.nombre + ']'
 
 
 class Cubierta(models.Model):
@@ -23,10 +32,16 @@ class Cubierta(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
 
+    def __str__(self):
+            return '[' + self.nombre + ']'
+
 class Relleno(models.Model):
     elID = models.PositiveSmallIntegerField()
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
+
+    def __str__(self):
+            return '[' + self.nombre + ']'
 
 
 class Toppings(models.Model):
@@ -34,8 +49,14 @@ class Toppings(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
 
+    def __str__(self):
+            return '[' + self.nombre + ']'
+
 
 class PreciosExtra(models.Model):
     elID = models.PositiveSmallIntegerField()
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
+
+    def __str__(self):
+            return '[' + self.nombre + ']'
