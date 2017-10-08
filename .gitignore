@@ -50,3 +50,13 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+
+\.idea/misc\.xml
+
+\.idea/proyecto\.iml
+
+cotizaciones/__pycache__/
+
+proyecto/__pycache__/
+
+*.pyc
