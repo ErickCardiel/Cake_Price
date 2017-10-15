@@ -1,6 +1,8 @@
-from django.conf.urls import url
-from . import views
+from django.conf.urls import include, url
+from cotizaciones.routes import api_router
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+
+    #API
+    url(r'^api/', include(api_router.urls)),
 ]
