@@ -11,7 +11,7 @@ class TipoPanSerializer(serializers.ModelSerializer):
         model = TipoPan
         fields = ('elID','nombre','precio')
 
-class AditivoPanSerializer(serializers.ModelSerializer):
+class AditivosPanSerializer(serializers.ModelSerializer):
     class Meta:
         model = AditivosPan
         fields = ('elID','nombre','precio')
@@ -35,3 +35,12 @@ class PreciosExtraSerializer(serializers.ModelSerializer):
     class Meta:
         model = PreciosExtra
         fields = ('elID','nombre','precio')
+
+class CotizacionesSerializer(serializers.Serializer):
+    Tamano = TamanoSerializer(many=True)
+    TipoPan = TipoPanSerializer(many=True)
+    AditivosPan = AditivosPanSerializer(many=True)
+    Cubierta = CubiertaSerializer(many=True)
+    Relleno = RellenoSerializer(many=True)
+    Toppings = ToppingsSerializer(many=True)
+    PreciosExtra = PreciosExtraSerializer(many=True)
