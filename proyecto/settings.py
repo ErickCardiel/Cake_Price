@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -126,3 +128,16 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Cross-Origin Resource Sharing.
+# https://github.com/ottoyiu/django-cors-headers/
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+    'null'
+)
+
+CORS_ALLOW_METHODS = (
+    'POST',
+    'GET',
+)
