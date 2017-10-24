@@ -24,8 +24,22 @@ function desplegarDatos(){
     });
 }
 
+function desplegarAditivos(){
+    $.each(objetoPastel.AditivosPan, function (object, arrayObject) {
+        $("#lAdiciones").append("<li>"+arrayObject.nombre+"</li>");
+    })
+}
+
+function desplegarTamano(){
+    $.each(objetoPastel.Tamano, function (object, arrayObject) {
+        $("#lTamano").append("<li>"+arrayObject.nombre+"</li>");
+    })
+}
+
 $(document).ready(function(){
     console.log("javascript loaded");
     datosPastel();
     desplegarDatos();
+    desplegarTamano();
+    desplegarAditivos();
 });
