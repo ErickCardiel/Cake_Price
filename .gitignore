@@ -60,3 +60,5 @@ cotizaciones/__pycache__/
 proyecto/__pycache__/
 
 *.pyc
+/static/
+/frontend/.idea/
