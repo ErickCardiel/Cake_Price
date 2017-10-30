@@ -1,4 +1,4 @@
-var objetoPastel;
+let objetoPastel;
 
 function datosPastel() {
     fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
@@ -22,7 +22,18 @@ function datosPastel() {
 //         $("#lAdiciones").append("<li>"+arrayObject.nombre+"</li>");
 //     })
 // }
-//
+
+function desplegarAditivos(){
+    let tag = document.getElementById("AditivosPan");
+    let radioHtml;
+    objetoPastel.AditivosPan.forEach(function (elemento) {
+        radioHtml = '<input type="radio" name="AditivosPan" value="' + elemento.nombre + '" />';
+        radioHtml += elemento.nombre;
+        radioHtml += "</br>";
+        tag.insertAdjacentHTML('beforeend',radioHtml);
+    });
+}
+
 // function desplegarTamano(){
 //     $.each(objetoPastel.Tamano, function (object, arrayObject) {
 //         $("#lTamano").append("<li>"+arrayObject.nombre+"</li>");
@@ -34,7 +45,17 @@ function init(){
     datosPastel();
     console.log(objetoPastel);
     // desplegarTamano();
-    // desplegarAditivos();
+    desplegarAditivos();
+}
+
+function testTraverse(){
+    test = objetoPastel.AditivosPan;
+    test = test.filter(function (current) {
+        return current !== undefined;
+    });
+    test.forEach(function (aditivo) {
+        console.log(aditivo.nombre);
+    })
 }
 
 window.onload = function() {
