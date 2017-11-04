@@ -23,7 +23,7 @@ h3{
 }
 h4{
   font-family: 'Playfair Display', serif;
-  text-align: center;
+  /*text-align: center;*/
   color: rgb(8,158,245);
 }
 a:link{
