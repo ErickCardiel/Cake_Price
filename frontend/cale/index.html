@@ -15,10 +15,23 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+          <div class="navbar-header navbar-right ">
+            <button type="button" class="navbar-toggle collapsed  " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
+              <!--  Code for the hamburger icon-->
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+
+          </div>
           <a href="#" class="navbar-brand">Pastelería D&C</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#showcase">Home</a></li>
             <li><a href="#info1">Galeria</a></li>
@@ -47,6 +60,7 @@
 			  el gran sabor y la calidad de nuestros pasteles. Para nosotros lo más importante es garantizar la
 			  higiene en nuestro trabajo, el sabor, la apareciencia, la calidad en nuestros ingredientes, la confianza, honestidad y responsabilidad hacia nuestros clientes.</p>
             </div><br>
+              <!-- <a class="btn btn-default btn-1g showcase-btn">Read More</a> -->
           </div>
         </div>
       </div>
@@ -62,7 +76,10 @@
             <h2>Galeria</h2>
                    <p class="text-justify">¿Aún no te decides si quieres contratarnos para tu evento especial? Mira nuestra galeria de trabajos realizados dando click al siguiente enlace, y ¡convencete que somos tu mejor opción!<br>
                      <!-- por ahora manda a la galeria de facebook-->
-                     <br><a class="btn btn-default btn-1g  " href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a>
+                     <br>
+                     <a class="btn btn-default btn-1g info1-btn" href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a>
+
+
                      <!-- <p class = "text-left"><button type="button" class="btn btn-default" >Galeria</button></p> -->
 
           </div>
@@ -97,7 +114,7 @@
               <p class="text-justify">Utilice nuestra herramienta para cotizar un pastel, si desea algún diseño
 	    	en especifo no dude en enviarnos un mensaje desde nuestro formulario de contacto para contestarles a
 	    	la brevedad.</p>
-        <p class = "text-center"><button type="button" class="btn btn-default">Cotizacion</button></p>
+        <a class="btn btn-default btn-1g testimonial-btn" href="#">Cotizacion</a>
 
             </div><br>
           </div>
@@ -116,16 +133,23 @@
             <br><br><br><br>
             <h2 class="text-center">FAQ</h2>
             <p class="text-center">¿Dónde estamos ubicados?¿métodos de pago?¿cómo hago un pedido? preguntas frecuentes en esta sección</p><br>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="#">FAQ</a>
+            </div>
 
-       		<p class = "text-center"><button type="button" class="btn btn-default">FAQ</button></p>
+
+
           </div>
         </div>
-        <div class="col-md6 col-sm-6">
+        <div class="col-md6 col-sm-6 text-align:center">
           <div class="info-right">
               <br><br><br><br>
             <h2 class="text-center">Contáctanos</h2>
             <p class="text-center">¿Quiéres cotizar un pastel con un diseño especifico?¿tu duda no aparece en nuestro FAQ? ¡Contáctanos!</p>
-            <p class = "text-center"><button type="button" class="btn btn-default">Contacto</button></p>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="#">Contáctanos</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -171,12 +195,26 @@
         distance:'300px'
       });
 
-      sr.reveal('.showcase-btn', {
+      sr.reveal('.info2-btn', {
         duration: 2000,
         delay: 2000,
         origin:'bottom',
 
       });
+      sr.reveal('.testimonial-btn', {
+        duration: 2000,
+        delay: 2000,
+        origin:'bottom',
+
+      });
+      sr.reveal('.info1-btn', {
+        duration: 2000,
+        delay: 3000,
+        origin:'bottom',
+
+      });
+
+
 
       sr.reveal('#testimonial div', {
         duration: 2000,
