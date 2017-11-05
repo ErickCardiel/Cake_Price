@@ -1,6 +1,7 @@
 body{
   margin-top: 90px;
   font-size: 16px;
+  /*background-color: #E0E0E0;*/
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -78,11 +79,12 @@ p{
   /*background: url(../img/9.jpg);*/
   padding: 40px;
   /*color: #fff;*/
-  border-top: #333 2px solid;
-  border-bottom: #333 2px solid;
-  margin-bottom: 90px;
+  /*border-top: #333 2px solid;
+  border-bottom: #333 2px solid;*/
+  margin-bottom: 40px;
 }
 
 footer{
+  font-size: 10px;
   padding: 30px;
 }
