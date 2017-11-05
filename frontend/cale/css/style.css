@@ -2,12 +2,16 @@ body{
   margin-top: 90px;
   font-size: 16px;
 }
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: Poppins;
-}
-p{
   font-family: Roboto;
 }
+
+p{
+  font-family: Roboto;
+  font-size: 20px;
+}
+
 .navbar-default{
   background: #fff;
   border:0;
@@ -21,13 +25,14 @@ p{
 }
 
 #showcase h1 {
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 20px;
 }
 
 #showcase img{
   width: 90%;
   margin-left: 20px;
+  margin-top: 0px;
 }
 
 #showcase .showcase-right{
@@ -35,46 +40,47 @@ p{
 }
 
 #testimonial{
-  background: #f1f1f1;
+  background: #ffffff;
   padding: 50px 0 30px 0;
   text-align: center;
   margin-top: 40px;
-
 }
 
-#testimonial p{
-  font-size: 32px;
-  font-family: 'Josefin Sans'
-  color: #000;
-}
+
 #testimonial p.customer{
   font-size: 20px;
   color:#666;
+  margin-bottom: 90px;
 }
 
-#info1 .info-right{
+
+#info1{
+  margin:20px 0 60px 0;
+  background: #ffffff;
+
+}
+
+#info1 .info-left{
   margin-top: 50px;
 }
 
 #info1 img{
   width: 90%;
-  margin-top: 50px;
-  margin-left: 20px;
-  margin-bottom: 40px;
+  margin-right: : 20px;
+  margin-top: 120px;
 }
-
 #info2{
   margin:20px 0 60px 0;
 }
 
-#contact{
-  background: url(../img/9.jpg);
+#info2
+{
+  /*background: url(../img/9.jpg);*/
   padding: 40px;
-  color: #fff;
-  border-top: #333 7px solid;
-  border-bottom: #333 7px solid;
-  margin-bottom: 20px;
-
+  /*color: #fff;*/
+  border-top: #333 2px solid;
+  border-bottom: #333 2px solid;
+  margin-bottom: 90px;
 }
 
 footer{
