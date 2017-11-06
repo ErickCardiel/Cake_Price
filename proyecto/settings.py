@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'cotizaciones.apps.CotizacionesConfig',
+    'faq.apps.FaqConfig',
+    'home.apps.HomeConfig',
+    'contacto.apps.ContactoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'proyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['FRONTEND_ROOT'],
+        'DIRS': ['frontend/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,19 +121,17 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'frontend'),
+    os.path.join(BASE_DIR, 'frontend/static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Cross-Origin Resource Sharing.
-# https://github.com/ottoyiu/django-cors-headers/
+############################################################################ .i.i.i.i.i.i.i.i.ii.i.i.i.
+## Si se deja la misma base de directorio la hace de pex v: ##
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+############################################################################ .i.i.i.i.i.i.i.i.ii.i.i.i.
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',

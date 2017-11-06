@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 
+
     #API
     url(r'^api/', include(api_router.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
