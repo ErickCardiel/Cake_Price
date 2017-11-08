@@ -1,0 +1,238 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="static/imgs/favIcon.png">
+    <title>Pastelería</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Pastelería D&C</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#showcase">Home</a></li>
+            <li><a href="#info1">Galeria</a></li>
+            <li><a href="#testimonial">Cotizaciones</a></li>
+            <li><a href="#info2">Contactanos</a></li>
+            <li><a href="#info2">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="showcase-left">
+				<img src="{% static "imgs/pirru.jpg" %}">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="showcase-right">
+              <h1>Nosotros</h1>
+              <p class="text-justify">Somos un pequeño negocio de pasteles que busca facilitar la vida de nuestros
+			  clientes mediante la preparación de cualquier pastel que desee a un precio economico, eso sin descuidar
+			  el gran sabor y la calidad de nuestros pasteles. Para nosotros lo más importante es garantizar la
+			  higiene en nuestro trabajo, el sabor, la apareciencia, la calidad en nuestros ingredientes, asi como
+              la confianza,honestidad y responsabilidad hacia nuestros clientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="info1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md6 col-sm-6">
+          <div class="info-left">
+            <h2>Galeria</h2>
+                   <p class="text-justify">¿Aún no te decides si quieres contratarnos para tu evento especial?
+                     Mira nuestra galeria de trabajos realizados dando click al siguiente enlace, y ¡convencete
+                     que somos tu mejor opción!</p>
+                     <!-- por ahora manda a la galeria de facebook-->
+                     <a class="btn btn-default btn-1g info1-btn" href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a>
+                     <!-- <p class = "text-left"><button type="button" class="btn btn-default" >Galeria</button></p> -->
+          </div>
+        </div>
+        <div class="col-md6 col-sm-6">
+          <div class="info-right">
+          <img src="{% static "imgs/prueba2.png" %}">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+   <hr>
+
+    <section id="testimonial">
+        <div class="container">
+        	  <div class="row">
+          <div class="col-md-6 col-sm-6">
+             <div class="testimonial-right">
+				<img src="{% static "imgs/mona.jpg" %}">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+
+            <div class="testimonial-right">
+              <h2>Cotizaciones</h2>
+              <p class="text-justify">Utilice nuestra herramienta para cotizar un pastel, si desea algún diseño
+	    	en especifico no dude en enviarnos un mensaje desde nuestro formulario de contacto para contestarle a
+                  la brevedad.</p>
+        <a class="btn btn-default btn-1g testimonial-btn" href="#">Cotizacion</a>
+
+            </div><br>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <hr>
+
+    <section id="info2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md6 col-sm-6">
+          <div class="info-left">
+            <h2 class="text-center">FAQ</h2>
+            <p class="text-center">¿Dónde estamos ubicados?¿métodos de pago?¿cómo hago un pedido? preguntas frecuentes en esta sección</p><br>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="/faq/">FAQ</a>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-md6 col-sm-6 text-align:center">
+          <div class="info-right">
+            <h2 class="text-center">Contáctanos</h2>
+            <p class="text-center">¿Quiéres cotizar un pastel con un diseño especifico?¿tu duda no aparece en nuestro FAQ? ¡Contáctanos!</p><br>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="/contacto/">Contáctanos</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <hr>
+
+
+
+    <footer>
+      <h5 class="text-center">Pastelería D&C Copyright &copy; 2017</h5>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.navbar', {
+        duration: 2000,
+        origin:'bottom'
+      });
+
+      sr.reveal('.showcase-left', {
+        duration: 2000,
+        origin:'top',
+        distance:'300px'
+      });
+
+      sr.reveal('.showcase-right', {
+        duration: 2000,
+        origin:'right',
+        distance:'300px'
+      });
+
+      sr.reveal('.info2-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+      sr.reveal('.testimonial-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+      sr.reveal('.info1-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+
+      sr.reveal('#testimonial div', {
+        duration: 2000,
+        origin:'bottom',
+
+      });
+
+      sr.reveal('.info-left', {
+        duration: 2000,
+        origin:'left',
+        distance:'300px',
+        viewFactor: 0.2
+
+      });
+
+      sr.reveal('.info-right', {
+        duration: 2000,
+        origin:'right',
+        distance:'300px',
+        viewFactor: 0.2
+
+      });
+    </script>
+
+    <script>
+    $(function() {
+      // Smooth Scrolling
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+
+  </body>
+</html>
