@@ -62,3 +62,4 @@ proyecto/__pycache__/
 *.pyc
 /static/
 /frontend/.idea/
+/frontend/node_modules/
