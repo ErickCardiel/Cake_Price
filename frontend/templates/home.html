@@ -8,29 +8,37 @@
     <title>Pastelería</title>
     <link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+   <div id = "myNavbar"class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand">Pastelería D&C</a>
+
+            <button type="button" class="navbar-toggle collapsed  " data-toggle="collapse" data-target=".navbar-collapse">
+              <!--  Code for the hamburger icon-->
+              <!-- <span class="sr-only">Toggle navigation</span> -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          <a href="#" class="navbar-brand">Pastelería&nbspD&C</a>
         </div>
 
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-
+        <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#showcase">Home</a></li>
             <li><a href="#info1">Galeria</a></li>
             <li><a href="#testimonial">Cotizaciones</a></li>
-            <li><a href="#info2">Contactanos</a></li>
-            <li><a href="#info2">FAQ</a></li>
+            <li><a href="#foot">Contactanos</a></li>
+            <li><a href="#foot">FAQ</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
 
 
     <section id="showcase">
@@ -38,7 +46,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="showcase-left">
-				<img src="{% static "imgs/pirru.jpg" %}">
+				<img src="{% static 'imgs/pirru.jpg' %}">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -55,7 +63,6 @@
       </div>
     </section>
 
-    <hr>
 
     <section id="info1">
     <div class="container">
@@ -73,7 +80,8 @@
         </div>
         <div class="col-md6 col-sm-6">
           <div class="info-right">
-          <img src="{% static "imgs/prueba2.png" %}">
+          <img src="{% static 'imgs/prueba2.png' %}">
+
 
           </div>
         </div>
@@ -81,14 +89,13 @@
     </div>
     </section>
 
-   <hr>
-
     <section id="testimonial">
         <div class="container">
         	  <div class="row">
           <div class="col-md-6 col-sm-6">
              <div class="testimonial-right">
-				<img src="{% static "imgs/mona.jpg" %}">
+				<img src="{% static 'imgs/mona.jpg' %}">
+
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -106,7 +113,6 @@
     	</div>
     </section>
 
-    <hr>
 
     <section id="info2">
     <div class="container">
@@ -140,11 +146,12 @@
 
     <hr>
 
+     <section id="foot">
 
-
-    <footer>
-      <h5 class="text-center">Pastelería D&C Copyright &copy; 2017</h5>
-    </footer>
+        <footer>
+          <h5 class="text-center">Pastelería D&C Copyright &copy; 2017</h5>
+        </footer>
+     </section>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"
