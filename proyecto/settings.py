@@ -127,11 +127,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'frontend/static'),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-############################################################################ .i.i.i.i.i.i.i.i.ii.i.i.i.
-## Si se deja la misma base de directorio la hace de pex v: ##
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-############################################################################ .i.i.i.i.i.i.i.i.ii.i.i.i.
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',

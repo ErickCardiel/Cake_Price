@@ -1,45 +1,22 @@
-var objetoPastel;
 
-function datosPastel(){
-    $.ajax("http://localhost:8000/cotizaciones/api/all/",
-        {
-            method:"GET"
-        }
-    ).then(function(res){
-            console.log(res);
-            objetoPastel = res;
-        },
-        function(err){
-            console.error(err);
-        }
-    );
-}
-
-function desplegarDatos(){
-    $.each(objetoPastel, function( index, array ) {
-        $.each(array, function(object, arrayObject){
-           console.log(arrayObject.nombre);
-           $("#lista").append(arrayObject.nombre);
-        });
+function desplegarAditivos(objetoPastel) {
+    let tag = document.getElementById("AditivosPan");
+    let radioHtml;
+    objetoPastel.AditivosPan.forEach(function (elemento) {
+        radioHtml = '<input type="radio" name="AditivosPan" value="' + elemento.nombre + '" />';
+        radioHtml += elemento.nombre;
+        radioHtml += "</br>";
+        tag.insertAdjacentHTML('beforeend', radioHtml);
     });
 }
 
-function desplegarAditivos(){
-    $.each(objetoPastel.AditivosPan, function (object, arrayObject) {
-        $("#lAdiciones").append("<li>"+arrayObject.nombre+"</li>");
-    })
-}
-
-function desplegarTamano(){
-    $.each(objetoPastel.Tamano, function (object, arrayObject) {
-        $("#lTamano").append("<li>"+arrayObject.nombre+"</li>");
-    })
-}
-
-$(document).ready(function(){
-    console.log("javascript loaded");
-    datosPastel();
-    desplegarDatos();
-    desplegarTamano();
-    desplegarAditivos();
-});
+window.onload = function() {
+    fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
+        return response.json();
+    }).then(function (jsonresponse) {
+        let objetoPastel = jsonresponse;
+        desplegarAditivos(objetoPastel);
+    }).catch(function (error) {
+        console.log(error);
+    });
+};
