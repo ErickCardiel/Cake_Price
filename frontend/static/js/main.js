@@ -1,3 +1,9 @@
+let app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+});
 
 function desplegarAditivos(objetoPastel) {
     let seccion = document.getElementById("AditivosPan");
@@ -26,21 +32,14 @@ function desplegarTamano(objetoPastel) {
 }
 
 
-window.onload = function() {
-    fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
-        return response.json();
-    }).then(function (jsonresponse) {
-        let objetoPastel = jsonresponse;
-        desplegarAditivos(objetoPastel);
-        desplegarTamano(objetoPastel);
-    }).catch(function (error) {
-        console.log(error);
-    });
+fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
+    return response.json();
+}).then(function (jsonresponse) {
+    let objetoPastel = jsonresponse;
+    desplegarAditivos(objetoPastel);
+    desplegarTamano(objetoPastel);
+}).catch(function (error) {
+    console.log(error);
+});
 
-    let app = new Vue({
-        el: '#app',
-        data: {
-            message: 'Hello Vue!'
-        }
-    });
-};
+
