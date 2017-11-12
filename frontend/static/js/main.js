@@ -15,12 +15,24 @@ function desplegarAditivos(objetoPastel) {
     });
 }
 
+function desplegarTamano(objetoPastel) {
+    let seccion = document.getElementById("Tamano");
+    objetoPastel.Tamano.forEach(function (elemento) {
+        let button = document.createElement("input");
+        button.setAttribute("type", "button");
+        button.setAttribute("value", elemento.nombre);
+        seccion.appendChild(button);
+    });
+}
+
+
 window.onload = function() {
     fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
         return response.json();
     }).then(function (jsonresponse) {
         let objetoPastel = jsonresponse;
         desplegarAditivos(objetoPastel);
+        desplegarTamano(objetoPastel);
     }).catch(function (error) {
         console.log(error);
     });
