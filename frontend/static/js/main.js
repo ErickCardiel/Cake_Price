@@ -1,12 +1,17 @@
 
 function desplegarAditivos(objetoPastel) {
-    let tag = document.getElementById("AditivosPan");
-    let radioHtml;
+    let seccion = document.getElementById("AditivosPan");
     objetoPastel.AditivosPan.forEach(function (elemento) {
-        radioHtml = '<input type="radio" name="AditivosPan" value="' + elemento.nombre + '" />';
-        radioHtml += elemento.nombre;
-        radioHtml += "</br>";
-        tag.insertAdjacentHTML('beforeend', radioHtml);
+        let radio = document.createElement("input");
+        let label = document.createElement("label");
+        radio.setAttribute("id",elemento.nombre);
+        radio.setAttribute("type","radio");
+        radio.setAttribute("name","AditivosPan");
+        radio.setAttribute("value",elemento.nombre);
+        label.setAttribute("for",elemento.nombre);
+        label.innerHTML = elemento.nombre;
+        seccion.appendChild(radio);
+        seccion.appendChild(label);
     });
 }
 
