@@ -1,37 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Pastelería</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../static/js/main.js"></script>
-</head>
-<body>
-    <form>
-        <div id="Tamano" class="categoria">
-            <h3>Tamaño:</h3>
-        </div>
-        <div id="TipoPan" class="categoria">
-            <h3>Tipo de pan:</h3>
-        </div>
-        <div id="AditivosPan" class="categoria">
-            <h3>Adiciones al pan:</h3>
-        </div>
-        <div id="Relleno" class="categoria">
-            <h3>Relleno:</h3>
-        </div>
-        <div id="Cubierta" class="categoria">
-            <h3>Cubierta:</h3>
-        </div>
-        <div id="Toppings" class="categoria">
-            <h3>Toppings:</h3>
-        </div>
-        <div id="PreciosExtra" class="categoria">
-            <h3>Precios extra:</h3>
-        </div>
-    </form>
+	<head>
+	<title>Dxd</title>
+	<link rel="stylesheet" href="{% static 'css/cotizar.css' %}">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"> </script>
 
-    <ul id="lista">    </ul>
 
-</body>
+	</head>
+
+	<body>
+		<h1>Cotiza tu pastel</h1>
+		<section id="Articulos">
+
+			<ul id="listaTamano">
+                {% for p in tamano %}
+                    <li style="background: white" data-articulo ="tugfa"><span class="multiplicador">{{p.multiplicador}}</span></li>
+                {% endfor %}
+			</ul>
+
+		</section>
+
+			<ul id="listaTipoPan">
+                {% for p in tipoPan %}
+                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                {% endfor %}
+			</ul>
+
+			<ul id="listaAditivos">
+                {% for p in aditivos %}
+                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                {% endfor %}
+			</ul>
+
+			<ul id="listaRelleno">
+                {% for p in precioExtra %}
+                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                {% endfor %}
+			</ul>
+
+			<ul id="listaCubierta">
+                {% for p in cubierta %}
+                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                {% endfor %}
+			</ul>
+
+
+
+	<section id="carrito">
+		<img src="{% static 'imgs/pirru.jpg' %}">
+		<span>$<span id='total'>0</span></span>
+	</section>
+
+	</body>
 </html>

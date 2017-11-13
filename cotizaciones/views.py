@@ -1,21 +1,28 @@
-from rest_framework import viewsets
-from cotizaciones.serializers import CotizacionesSerializer
-from collections import namedtuple
-from rest_framework.response import Response
-from cotizaciones.models import *
+from django.shortcuts import render
+from django.shortcuts import render_to_response
+from django.shortcuts import HttpResponse
+from django.template import RequestContext
+from django.template import loader
+from .models import *
 
-Cotizaciones = namedtuple('Cotizaciones',('Tamano','TipoPan','AditivosPan','Cubierta','Relleno','Toppings','PreciosExtra'))
+def muestraAditivos(request):
 
-class CotizacionesViewSet(viewsets.ViewSet):
-    def list(self, request):
-        cotizaciones = Cotizaciones(
-            Tamano.objects.all(),
-            TipoPan.objects.all(),
-            AditivosPan.objects.all(),
-            Cubierta.objects.all(),
-            Relleno.objects.all(),
-            Toppings.objects.all(),
-            PreciosExtra.objects.all(),
-        )
-        serializer = CotizacionesSerializer(cotizaciones)
-        return Response(serializer.data)
+    tamano = Tamano.objects.all()
+    tipoPan = TipoPan.objects.all()
+    aditivosPan = AditivosPan.objects.all()
+    cubierta = Cubierta.objects.all()
+    relleno = Relleno.objects.all()
+    toppings = Toppings.objects.all()
+    precioExtra = PreciosExtra.objects.all()
+
+    template = loader.get_template('cotizar.html')
+    context = {
+        'tamano': tamano,
+        'tipoPan': tipoPan,
+        'aditivosPan': aditivosPan,
+        'cubierta': cubierta,
+        'relleno': relleno,
+        'toppings': toppings,
+        'precioExtra': precioExtra,
+    }
+    return HttpResponse(template.render(context, request))
