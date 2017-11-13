@@ -1,22 +1,45 @@
+let app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+});
 
 function desplegarAditivos(objetoPastel) {
-    let tag = document.getElementById("AditivosPan");
-    let radioHtml;
+    let seccion = document.getElementById("AditivosPan");
     objetoPastel.AditivosPan.forEach(function (elemento) {
-        radioHtml = '<input type="radio" name="AditivosPan" value="' + elemento.nombre + '" />';
-        radioHtml += elemento.nombre;
-        radioHtml += "</br>";
-        tag.insertAdjacentHTML('beforeend', radioHtml);
+        let radio = document.createElement("input");
+        let label = document.createElement("label");
+        radio.setAttribute("id",elemento.nombre);
+        radio.setAttribute("type","radio");
+        radio.setAttribute("name","AditivosPan");
+        radio.setAttribute("value",elemento.nombre);
+        label.setAttribute("for",elemento.nombre);
+        label.innerHTML = elemento.nombre;
+        seccion.appendChild(radio);
+        seccion.appendChild(label);
     });
 }
 
-window.onload = function() {
-    fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
-        return response.json();
-    }).then(function (jsonresponse) {
-        let objetoPastel = jsonresponse;
-        desplegarAditivos(objetoPastel);
-    }).catch(function (error) {
-        console.log(error);
+function desplegarTamano(objetoPastel) {
+    let seccion = document.getElementById("Tamano");
+    objetoPastel.Tamano.forEach(function (elemento) {
+        let button = document.createElement("input");
+        button.setAttribute("type", "button");
+        button.setAttribute("value", elemento.nombre);
+        seccion.appendChild(button);
     });
-};
+}
+
+
+fetch('http://localhost:8000/cotizaciones/api/all/').then(function (response) {
+    return response.json();
+}).then(function (jsonresponse) {
+    let objetoPastel = jsonresponse;
+    desplegarAditivos(objetoPastel);
+    desplegarTamano(objetoPastel);
+}).catch(function (error) {
+    console.log(error);
+});
+
+
