@@ -1,0 +1,50 @@
+#listaAditivos li{
+	border:1px solid;
+	display: inline-block;/* en lugar de float*/
+	height: 150px;
+	list-style: none;
+	width: 200px;
+}
+
+#listaTipoPan li{
+	border:1px solid;
+	display: inline-block;
+	height: 150px;
+	list-style: none;
+	width: 200px;
+}
+
+#listaTamano li{
+	border:1px solid;
+	display: inline-block;
+	height: 150px;
+	list-style: none;
+	width: 200px;
+}
+
+
+#listaCubierta li{
+	border:1px solid;
+	display: inline-block;
+	height: 150px;
+	list-style: none;
+	width: 200px;
+}
+
+#listaRelleno li{
+	border:1px solid;
+	display: inline-block;
+	height: 150px;
+	list-style: none;
+	width: 200px;
+}
+
+#hide{
+  display:none;
+}
+
+
+#show{
+  display:true;
+}
+
