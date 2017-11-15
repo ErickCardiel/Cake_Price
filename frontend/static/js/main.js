@@ -1,4 +1,4 @@
-    var gastosAdicionales=5;
+  var gastosAdicionales=5;
 	var multiplicadorGanancia=2;
 	var multiplicadorTamano;
 	var total=0;

@@ -32,11 +32,11 @@
         </div>
         <div class="container">
           <ul class="main-nav">
-            <li><a href="/#/">Home <i class="fa fa-birthday-cake"></i></a></li>
+            <li><a href="/#/">Home<i class="fa fa-birthday-cake"></i></a></li>
             <li><a href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galería <i class="fa fa-facebook-official"></i></a></li>
             <!-- <li><a href="/cotizaciones/">Cotización <i class="fa fa-money"></i></a></li> -->
             <li><a href="/contacto/">Contáctanos <i class="fa fa-envelope-o"></i></a></li>
-            <!-- <li><a href="/#faq/">FAQ <i class="fa fa-comments"></i></a></li> -->
+            <!-- <li><a href="#faq">FAQ <i class="fa fa-comments"></i></a></li> -->
           </ul>
         </div>
       </div>
@@ -51,18 +51,17 @@
 			<ul id="listaTamano">
                 <h2>Tamaño del pastel</h2>
                 {% for p in tamano %}
-                    <li class="text-center"style="background: lightgray" data-articulo ="tugfa"><span class="multiplicador">{{p.nombre}}</span></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="multiplicador">{{p.multiplicador}}</span></li>
                 {% endfor %}
 			</ul>
 
 		</section>
 
-
 			<ul id="listaTipoPan">
                 <h2>Tipo de pan</h2>
                 {% for p in tipoPan %}
 		        <!-- <img src="{% static "{{  TipoPan.logo }}" %}"> -->
-                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">${{p.precio}}</span><img src="{{ p.logo }}"></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span><<img src="{{ p.logo }}"></li>
                 {% endfor %}
 			</ul>
 
