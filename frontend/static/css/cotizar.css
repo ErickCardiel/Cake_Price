@@ -1,3 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.row{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+body{
+
+  font-family:sans-serif bold;
+	/*background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));*/
+	height: 149vh;
+  background-position:right;
+  background-size: cover;
+	/*margin-bottom: -200px!important;*/
+	background-repeat: no-repeat;
+	margin-left: 200px!important;
+
+}
+
+
+header{
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../imgs/food.jpg);*/
+
+  margin-bottom: 150px;
+}
+
+
+/*barra de menu*/
+
+.main-nav{
+  list-style: none;
+  float: right;
+	/*border-style: groove;*/
+	/*border-radius: 10px;*/
+	/*padding: 1px 1px;*/
+	/*border-top: 2px!important;*/
+	/*border-top-width:thick;*/
+	/*height: 40px;*/
+	/*border-color: white!important;*/
+
+}
+
+.main-nav li{
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.main-nav li a{
+  color: black;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.logo img{
+  /*linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7))*/
+
+  height: 90px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 230px;
+  position: absolute;
+  margin-top: 20px;
+  -webkit-filter: brightness(85%); /* Safari 6.0 - 9.0 */
+   /*margin:auto;*/
+  transform: translate(-200%,0%);
+  /*left: 20%;*/
+}
+
+.logo img:hover{
+  color: #e67e22!important;
+  border-bottom: 2px solid #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 5px;
+}
+
+
+
+.main-nav li a:hover{
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 5px;
+}
+
+.btn{
+  font-size: 20px;
+  border: 1px solid #e67e22;
+  padding: 10px 30px;
+  color: #e67e22;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.button-awe{
+  margin-top: 10px;
+    margin:0 -650px;
+}
+
+.btn-half:hover{
+  background-color: #e67e22;
+  color: black;
+  transition: all 0.5s ease-in;
+
+}
+
+
+
 #listaAditivos li{
 	border:1px solid;
 	display: inline-block;/* en lugar de float*/
@@ -29,6 +145,7 @@
 	height: 150px;
 	list-style: none;
 	width: 200px;
+
 }
 
 #listaRelleno li{
@@ -48,3 +165,77 @@
   display:true;
 }
 
+#carrito h3{
+
+	margin-left:90px;
+}
+
+
+/*#total{*/
+	/*margin-left:4px;*/
+	/*background-color: #e67e22;*/
+	/*font-size:20px;*/
+	/*!*border: 1px solid #e67e22;*!*/
+  	/*padding: 10px 30px;*/
+  /*text-decoration: none;*/
+  /*border-radius: 12px;*/
+  /*!*margin-right: 15px;*!*/
+	/*color:black;*/
+	/*!*margin-bottom:200px;*!*/
+/*}*/
+#precio{
+	margin-left:45px;
+	background-color:#e67e22;
+	background-size: 200px;
+	font-size:20px;
+	/*border: 1px solid #e67e22;*/
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 12px;
+	border-color: darkblue;
+  /*margin-right: 15px;*/
+	color:whitesmoke;
+
+	/*margin-bottom:2000px;*/
+
+}
+
+#listaTamano span{
+	font-size: 30px;
+}
+#listaTipoPan span{
+	font-size: 20px;
+}
+#listaTipoPan img{
+	padding:20px 20px;
+	height:140px;
+}
+/*#listaTipoPan{
+	border: 10px 10px !important;
+}*/
+#carrito img{
+	/*background-color: blue !important;*/
+	/*color: white!important;*/
+	font-size-adjust: 200px!important;
+	height:180px;
+	margin-top:50px;
+	margin-left:20px;
+}
+
+#carrito{
+	background-color: transparent;
+	font-size:20px;
+}
+h2{
+	color: black!important;
+	font-size:20px!important;
+	margin-left:10px!important;
+	margin-bottom: 20px!important;
+}
+
+h1{
+	color: black!important;
+	font-size:40px!important;
+	margin-left:20px!important;
+	margin-bottom: 80px!important;
+}

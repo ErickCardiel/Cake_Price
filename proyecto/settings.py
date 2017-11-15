@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'proyecto/media')
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'armando.nieblas94@gmail.com'
 EMAIL_HOST_PASSWORD = 'gatito123'
@@ -62,6 +66,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyecto.urls'
+
+
 
 TEMPLATES = [
     {

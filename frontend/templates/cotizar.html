@@ -1,57 +1,101 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-	<title>Dxd</title>
+	<title>Cotizaciones</title>
 	<link rel="stylesheet" href="{% static 'css/cotizar.css' %}">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script type="text/javascript" src="{% static 'js/main.js' %}"> </script>
+	<script type="text/javascript" src="{%  static 'js/main.js' %}"> </script>
+
+	<link rel="icon" href="imgs/favIcon.png">
+	<link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+	<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+	<script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 
 	</head>
 
 	<body>
+		<!-- menu -->
+		<header>
+      <!-- barra de menu -->
+      <div class="row">
+        <div class="logo">
+          <img src="{% static 'imgs/pitospitos.png' %}">
+        </div>
+        <div class="container">
+          <ul class="main-nav">
+            <li><a href="/#/">Home <i class="fa fa-birthday-cake"></i></a></li>
+            <li><a href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galería <i class="fa fa-facebook-official"></i></a></li>
+            <!-- <li><a href="/cotizaciones/">Cotización <i class="fa fa-money"></i></a></li> -->
+            <li><a href="/contacto/">Contáctanos <i class="fa fa-envelope-o"></i></a></li>
+            <!-- <li><a href="/#faq/">FAQ <i class="fa fa-comments"></i></a></li> -->
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+		<!-- contenido de pagina -->
+
 		<h1>Cotiza tu pastel</h1>
 		<section id="Articulos">
 
 			<ul id="listaTamano">
+                <h2>Tamaño del pastel</h2>
                 {% for p in tamano %}
-                    <li style="background: white" data-articulo ="tugfa"><span class="multiplicador">{{p.multiplicador}}</span></li>
+                    <li class="text-center"style="background: lightgray" data-articulo ="tugfa"><span class="multiplicador">{{p.nombre}}</span></li>
                 {% endfor %}
 			</ul>
 
 		</section>
 
+
 			<ul id="listaTipoPan">
+                <h2>Tipo de pan</h2>
                 {% for p in tipoPan %}
-                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+		        <!-- <img src="{% static "{{  TipoPan.logo }}" %}"> -->
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">${{p.precio}}</span><img src="{{ p.logo }}"></li>
                 {% endfor %}
 			</ul>
 
 			<ul id="listaAditivos">
+               <h2>Aditivos</h2>
                 {% for p in aditivos %}
                     <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
 			</ul>
 
 			<ul id="listaRelleno">
+                <h2>Rellenos</h2>
                 {% for p in precioExtra %}
                     <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
 			</ul>
 
 			<ul id="listaCubierta">
+                <h2>Cubierta</h2>
                 {% for p in cubierta %}
                     <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
 			</ul>
 
-		
+
 	<section id="carrito">
-		<img src="{% static 'imgs/pirru.jpg' %}">
-		<span>$<span id='total'>0</span></span>
+		<img src="{% static 'imgs/pop.jpg' %}">
+		<br>
+        <span id="precio">Total: $<span id='total'>0</span></span>
 	</section>
+    <br>
+        <br>
+    <br>
 
 	</body>
 </html>

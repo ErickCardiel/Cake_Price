@@ -15,6 +15,8 @@ def muestraAditivos(request):
     toppings = Toppings.objects.all()
     precioExtra = PreciosExtra.objects.all()
 
+
+
     template = loader.get_template('cotizar.html')
     context = {
         'tamano': tamano,
