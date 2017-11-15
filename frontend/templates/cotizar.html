@@ -51,7 +51,7 @@
 			<ul id="listaTamano">
                 <h2>Tamaño del pastel</h2>
                 {% for p in tamano %}
-                    <li style="background: lightgray" data-articulo ="tugfa"><span class="multiplicador">{{p.multiplicador}}</span></li>
+                    <li style="background: lightgray" class="text-center" data-articulo ="tugfa">{{p.nombre}}<span class="multiplicador">{{p.multiplicador}}</span></li>
                 {% endfor %}
 			</ul>
 
@@ -61,36 +61,36 @@
                 <h2>Tipo de pan</h2>
                 {% for p in tipoPan %}
 		        <!-- <img src="{% static "{{  TipoPan.logo }}" %}"> -->
-                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span><<img src="{{ p.logo }}"></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span><img src="{{ p.logo }}"></li>
                 {% endfor %}
 			</ul>
 
-			<ul id="listaAditivos">
+			<!-- <ul id="listaAditivos">
                <h2>Aditivos</h2>
                 {% for p in aditivos %}
-                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
 			</ul>
 
 			<ul id="listaRelleno">
                 <h2>Rellenos</h2>
                 {% for p in precioExtra %}
-                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
 			</ul>
 
 			<ul id="listaCubierta">
                 <h2>Cubierta</h2>
                 {% for p in cubierta %}
-                    <li style="background: white" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
+                    <li style="background: lightgray" data-articulo ="tugfa"><span class="precio">{{p.precio}}</span></li>
                 {% endfor %}
-			</ul>
+			</ul> -->
 
 
 	<section id="carrito">
 		<img src="{% static 'imgs/pop.jpg' %}">
 		<br>
-        <span id="precio">Total: $<span id='total'>0</span></span>
+        <span style="background-color: lightgray"id="precio">Total: $<span id='total'>0</span></span>
 	</section>
     <br>
         <br>

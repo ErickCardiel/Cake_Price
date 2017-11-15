@@ -195,16 +195,20 @@ header{
   border-radius: 12px;
 	border-color: darkblue;
   /*margin-right: 15px;*/
-	color:whitesmoke;
+	color:#e67e22;
 
 	/*margin-bottom:2000px;*/
 
 }
-
+#listaTamano{
+	font-size: 20px!important;
+}
 #listaTamano span{
-	font-size: 30px;
+	font-size: 1px;
+	margin-left: 20px;
 }
 #listaTipoPan span{
+	margin-left: 10px;
 	font-size: 20px;
 }
 #listaTipoPan img{
@@ -237,6 +241,6 @@ h2{
 h1{
 	color: black!important;
 	font-size:40px!important;
-	margin-left:20px!important;
+	margin-left:10px!important;
 	margin-bottom: 80px!important;
 }

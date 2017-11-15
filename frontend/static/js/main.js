@@ -19,6 +19,17 @@
 			helper:'clone',
 			revert: "invalid",
 		})
+    $('#listaAditivos li').draggable
+		({
+			helper:'clone',
+			revert: "invalid",
+		})
+
+    $('#listaCubierta li').draggable
+		({
+			helper:'clone',
+			revert: "invalid",
+		})
 
 
 		$('#carrito').droppable
@@ -36,6 +47,8 @@
 			{
 				multiplicadorTamano = parseFloat(draggable.children('.multiplicador').text());
 				$('#listaTamano li').hide();
+        $('#listaTamano').hide();
+        // $('#tipoPan').hide();
 			}
 
 			if(multiplicadorTamano&&nuevoPrecio)
@@ -50,6 +63,7 @@
 			if(cnt==1)
 			{
 			    $('#listaTipoPan li').hide();
+          $('#listaTipoPan').hide();
 			    //$('#listaTamano li').css.('display','none');
 				var nuevo = (((multiplicadorTamano*nuevoPrecio)*multiplicadorGanancia)+gastosAdicionales);
 				total = nuevo;
