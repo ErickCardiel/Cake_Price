@@ -25,7 +25,7 @@
 			revert: "invalid",
 		})
 
-    $('#listaCubierta li').draggable
+    $('#listaRelleno li').draggable
 		({
 			helper:'clone',
 			revert: "invalid",
@@ -45,10 +45,10 @@
 
 			if(parseFloat(draggable.children('.multiplicador').text()))
 			{
-				multiplicadorTamano = parseFloat(draggable.children('.multiplicador').text());
-				$('#listaTamano li').hide();
-        $('#listaTamano').hide();
-        // $('#tipoPan').hide();
+  				multiplicadorTamano = parseFloat(draggable.children('.multiplicador').text());
+  				// $('#listaTamano li').hide();
+          $('#listaTamano').hide();
+          // $('#tipoPan').hide();
 			}
 
 			if(multiplicadorTamano&&nuevoPrecio)
@@ -62,8 +62,19 @@
 
 			if(cnt==1)
 			{
-			    $('#listaTipoPan li').hide();
+			    // $('#listaTipoPan li').hide();
           $('#listaTipoPan').hide();
+
+			    //$('#listaTamano li').css.('display','none');
+				var nuevo = (((multiplicadorTamano*nuevoPrecio)*multiplicadorGanancia)+gastosAdicionales);
+				total = nuevo;
+				$('#total').text(nuevo);
+			}
+      if(cnt==2)
+			{
+			    // $('#listaTipoPan li').hide();
+          $('#listaRelleno').hide();
+
 			    //$('#listaTamano li').css.('display','none');
 				var nuevo = (((multiplicadorTamano*nuevoPrecio)*multiplicadorGanancia)+gastosAdicionales);
 				total = nuevo;
@@ -72,9 +83,10 @@
 
 			if(cnt>=2&&cnt<=8)
 			{
+
 				total = total + ((nuevoPrecio*multiplicadorTamano)*multiplicadorGanancia);
 				anterior = total;
 				$('#total').text(total);
 			}
-        }
+    }
 	});

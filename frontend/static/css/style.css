@@ -163,6 +163,8 @@ h3:after{
 
 .fea h3{
   /*font-family: Poppiins;*/
+  font-family: "Times New Roman" !important;
+
   margin-top: 80px;
   margin-bottom: 30px;
   margin:auto;
@@ -196,11 +198,14 @@ h3:after{
 }
 
 .ram p{
-  font-size: 20px;
-  margin-top: 20px;
-  margin-right: 20px
+  text-align: justify;
+    font-size: 18px;
+  width: auto;
+    margin-bottom: 40px;
 }
 .ram h4{
+  font-family: "Times New Roman" !important;
+
   margin-top: 200px;
   margin-left: 20px;
   color: white;
@@ -235,7 +240,7 @@ h3:after{
 
 
 .faq h3{
-  /*font-family: Poppiins;*/
+  font-family: "Times New Roman" !important;
   margin-top: 80px;
   margin-bottom: 30px;
   margin:auto;
