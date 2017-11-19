@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="imgs/favIcon.png">
+    <link rel="icon" href="{% static ' imgs/favIcon.png ' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -82,21 +82,41 @@
         </div>
       </section>
       <section id="respuestas">
-
-          <div class="row">
-            <div class="col-md-3">
-              <h4>pene</h4>
-            </div>
-            <div class="col-md-3">
-              <h4>culo</h4>
-            </div>
-            <div class="col-md-3">
-              <h4>nena</h4>
-            </div>
+        <div class="container">
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">Pedidos</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Entregas</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Cambios</button>
+            <!-- <button class="tablinks" onclick="openCity(event, 'Rome')">Modos de pago</button> -->
           </div>
-        <!-- </div> -->
-      </section>
 
+          <div id="London" class="tabcontent">
+            <h5>¿Cuánto tiempo se requiere para hacer un pedido?</h5>
+            <p>Se requiere realizar el pedido al menos 1 semana antes.</p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h5>¿Cuál es la forma de entrega?</h5>
+            <p>Puede pasar a recogerlo o entregamos a domicilio, este ultimo implica un costo extra.</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h5>¿Puedo solicitar que cambien cierto ingrediente del pastel?</h5>
+            <p>Si. Ese tipo de cambios y detalles se acuerdan por correo una vez enviada la solicitud</p>
+          </div>
+          <!-- <div id="Rome" class="tabcontent">
+            <h4>¿Cómo pago mi pedido?</h4>
+            <p>Tokyo is the capital of Japan.</p>
+          </div> -->
+        <!-- </div> -->
+        </div>
+
+      </section>
+      <br>
+      <footer>
+
+        <p class="text-center">Pastelería D&C Copyright &copy; 2017</p>
+      </footer>
       <script>
       window.sr = ScrollReveal();
         sr.reveal('.navbar', {
@@ -148,6 +168,19 @@
            origin:'bottom',
 
          });
+
+         sr.reveal('.faq ', {
+           duration: 2000,
+           delay: 1000,
+           origin:'bottom',
+
+         });
+         sr.reveal('.tab', {
+           duration: 2000,
+           delay: 1000,
+           origin:'bottom',
+
+         });
       </script>
     <script>
     $(function() {
@@ -166,6 +199,22 @@
       });
     });
     </script>
+    <!-- faq script -->
+    <script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
 
   </body>
 </html>

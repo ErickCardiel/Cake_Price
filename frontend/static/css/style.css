@@ -226,8 +226,8 @@ h3:after{
   color: #e67e22;
   text-decoration: none;
   border-radius: 12px;
-  margin-top: 15px;
-  margin-left: 100px;
+  /*margin-top: 1px;*/
+  margin-left: 10px;
 }
 
 .ram .btn-half:hover{
@@ -256,4 +256,99 @@ width: auto;
 
 }
 
+
+/*botones faq*/
+
+
+div.tab {
+      font-family: "Times New Roman" !important;
+    /*font-size: 199px;*/
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    /*margin-left: 200px!important;*/
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+      font-family: "Times New Roman" !important;
+ /*font-size: 199px;*/
+    text-align: center;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin-left: 200px!important;
+}
+/*#tablinks{
+  text-align: center;
+  margin-left: 600px!important;
+}*/
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+      font-family: "Times New Roman" !important;
+
+    background-color: #ddd;
+    text-align: center;
+    margin-left: 200px!important;
+
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+      font-family: "Times New Roman" !important;
+
+    background-color: #ccc;
+    text-align: center;
+    margin-left: 200px!important;
+
+}
+/* Style the tab content */
+.tabcontent {
+    /*text-align: center;*/
+      font-family: "Times New Roman" !important;
+
+    margin-left: -23px;
+    margin-top: 20px;
+    font-size: 20px;
+    /*margin: auto;*/
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    margin-left: 200px!important;
+}
+
+.tabcontent h5{
+      font-family: "Times New Roman" !important;
+
+    text-align: center;
+    /*margin-top: 20px;*/
+    font-size: 40px;
+    margin-left: -150px;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 /**/
+
+footer{
+  margin-top: 40px;
+  padding: 30px;
+  /*position:center;*/
+
+}
