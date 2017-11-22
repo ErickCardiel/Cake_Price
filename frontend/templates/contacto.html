@@ -1,24 +1,194 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contactanos</title>
-</head>
-<body>
-{% if info_enviado %}
-    Gracias por enviar un comentario, nos pondremos en contacto contigo lo mas pronto posible.
-    <br>
-    La infomacion fue la siguiente
-<p> Email utilizado: {{email}}</p>
-<p> Titulo utilizado: {{titulo}}</p>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'imgs/favIcon.png' %}">
+    <title>Pastelería</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+          <link rel="stylesheet" href="{% static 'css/contactanos.css' %}">
 
-{% else %}
-<form action="."method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="submit">
-</form>
+    <script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </head>
 
-{% endif %}
-</body>
+  <body>
+   <div id = "myNavbar"class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed  " data-toggle="collapse" data-target=".navbar-collapse">
+              <!--  Code for the hamburger icon-->
+              <!-- <span class="sr-only">Toggle navigation</span> -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+              <div class="logo">
+			          <img src="{% static 'imgs/pitospitos.png' %}">
+			        </div>
+
+        </div>
+
+        <div class="collapse navbar-collapse">
+             <a href="#" class="navbar-brand">Pastelería&nbspD&C</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/#/">Home</a></li>
+            <li><a href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a></li>
+            <li><a href="/cotizaciones/">Cotizaciones</a></li>
+{#            <li><a href="/contacto/">Contactanos</a></li>#}
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+<section>
+     <div class="container">
+    <h1>Contactanos</h1>
+    {% if info_enviado %}
+        <p>Gracias por enviar un comentario, nos pondremos en contacto contigo lo mas pronto posible.</p> -->
+
+
+
+    <p>Email utilizado: {{email}}</p>
+    <p> Titulo utilizado: {{titulo}}</p>
+      <p> Texto utilizado: {{ Texto }}</p>
+
+    {% else %}
+    <form enctype="multipart/form-data" action="."method="POST">
+        {% csrf_token %}
+
+          {{form.as_p}}
+
+        <input id="post"type="submit" value="submit">
+    </form>
+
+    {% endif %}
+  </div>
+</section>
+
+
+
+  <script>
+  $(function() {
+    // Smooth Scrolling
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
+
+    <hr>
+
+     <section id="foot">
+
+        <footer>
+          <h5 class="text-center">Pastelería D&C Copyright &copy; 2017</h5>
+        </footer>
+     </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.navbar', {
+        duration: 2000,
+        origin:'bottom'
+      });
+
+      sr.reveal('.showcase-left', {
+        duration: 2000,
+        origin:'top',
+        distance:'300px'
+      });
+
+      sr.reveal('.showcase-right', {
+        duration: 2000,
+        origin:'right',
+        distance:'300px'
+      });
+
+      sr.reveal('.info2-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+      sr.reveal('.testimonial-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+      sr.reveal('.info1-btn', {
+        duration: 2000,
+        delay: 1000,
+        origin:'bottom',
+
+      });
+
+      sr.reveal('#testimonial div', {
+        duration: 2000,
+        origin:'bottom',
+
+      });
+
+      sr.reveal('.info-left', {
+        duration: 2000,
+        origin:'left',
+        distance:'300px',
+        viewFactor: 0.2
+
+      });
+
+      sr.reveal('.info-right', {
+        duration: 2000,
+        origin:'right',
+        distance:'300px',
+        viewFactor: 0.2
+
+      });
+    </script>
+
+    <script>
+    $(function() {
+      // Smooth Scrolling
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+
+  </body>
 </html>
+
+

@@ -1,91 +1,178 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.row{
-  max-width: 1140px;
-  margin: 0 auto;
-}
 
 body{
-  font-family:sans-serif bold;
-
-}
-.hero p{
-  font-size: 40px;
-  margin-left: 220px;
-  font-family: cursive;
-}
-.hero{
-  font-size: 50px;
-  /*font-style:normal;*/
-  position: absolute;
-  width: 1140px;
-  top:40%;
-  left: 50%;
-  /*transform: translate(-70%,50%);*/
+  margin-top: 90px;
+  font-size: 16px;
+  /*background-color: #E0E0E0;*/
 }
 
-header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../imgs/food.jpg);
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 50px;
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Times New Roman";
 }
 
-.hero h1{
-  font-size: 80px!important;
-  color: white;
-  /*margin-left: 2000px;*/
-  margin:0 -650px;
-  font-family:"Times New Roman";
-}
-
-h2,h3,h4{
-  font-size: 80px!important;
-  color: black;
-  /*position:fixed;*/
-  width: 1140px;
-  top:40%;
-  left: 50%;
-  margin-top: 20px;
-  margin-left: 160px;
-  /*transform: translate(-70%,50%);*/
-}
-
-/*barra de menu*/
-
-.main-nav{
-  list-style: none;
-  float: right;
-}
-
-.main-nav li{
-  display: inline-block;
-  margin-left: 40px;
+p{
+  font-family: "Times New Roman";
   font-size: 20px;
+}
+
+.navbar-default{
+  background: #fff;
+  border:0;
+  font-family: "Times New Roman";
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.navbar-brand{
+  font-size: 20px;
+  /*text-align: center;*/
+  /*margin: 20 30;*/
+  font-family: "Times New Roman";
+  color:#000 !important;
+  font-weight: bold;
+}
+
+#showcase h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#showcase img{
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+#showcase .showcase-right{
   margin-top: 50px;
 }
 
-.main-nav li a{
-  color: white;
-  text-decoration: none;
-  font-size: 90%;
-  font-weight: bold;
+#testimonial{
+  background: #ffffff;
+  padding: 50px 0 30px 0;
+  text-align: center;
+  margin-top: 40px;
 }
+
+
+#testimonial p.customer{
+  font-size: 20px;
+  color:#666;
+  margin-bottom: 90px;
+}
+
+
+#info1{
+  margin:20px 0 60px 0;
+  background: #ffffff;
+}
+
+#info1 .info-left{
+  margin-top: 50px;
+}
+
+#info1 .info-right{
+  margin-top: 50px;
+}
+#info1 img{
+  width: 90%;
+  margin-right: : 20px;
+  margin-top: 20px;
+
+}
+
+#ACD{
+  text-align: center !important;
+  padding: 50px 0 30px 0;
+  text-align: center;
+ß}
+
+-
+
+#info2
+{
+  /*background: url(../img/9.jpg);*/
+   margin-top: 20px;
+  /*color: #fff;*/
+  /*border-top: #333 2px solid;
+  border-bottom: #333 2px solid;*/
+  margin-bottom: 20px;
+}
+
+footer{
+  font-size: 10px;
+  padding: 30px;
+}
+
+
+/*faq*/
+.faq h2{
+  font-family: "Times New Roman" !important;
+  margin-top: 120px!important;
+  margin-bottom: 60px!important;
+  margin:auto;
+  width: 70%;
+  text-align: center;
+  font-size:40px;
+
+}
+
+
+.faq h5{
+  font-family: "Times New Roman" !important;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  margin:auto;
+  text-align: center!important;
+  margin-left: 300px!important;
+  width: 70%;
+  font-size:40px;
+}
+
+.faq button{
+  margin-left:300px;
+}
+.faq p{
+    /*text-align: center!important;*/
+
+  margin-top: 20px;
+text-align: justify;
+  font-size: 20px;
+width: auto;
+  margin-bottom: 40px;
+  margin-left:480px;
+
+}
+
+
+/*botones faq*/
+
+
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/**/
 
 .logo img{
   /*linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7))*/
 
-  height: 90px;
+  height: 50px;
   float: left;
-  margin-top: 5px;
-  margin-left: 130px;
-  position: absolute;
-  margin-top: 20px;
+  margin-top: 2px;
+  margin-left: 230px;
+  /*position: absolute;*/
+  /*margin-top: 20px;*/
   -webkit-filter: brightness(85%); /* Safari 6.0 - 9.0 */
    /*margin:auto;*/
   transform: translate(-200%,0%);
@@ -100,255 +187,59 @@ h2,h3,h4{
 }
 
 
+/*<<<<<<< HEAD*/
+/*@@media(max-width:600px) {*/
+  /*.showcase{*/
+    /*padding: 30px;*/
+    /*height: 750px;*/
+    /*margin-top: 100px;*/
+  /*}*/
 
-.main-nav li a:hover{
-  color: #e67e22;
-  border-bottom: 2px solid #e67e22;
-  transition: all 0.5s ease-in;
-  padding: 5px;
-}
+  /*.showcase img {*/
+    /*width: 90%;*/
+    /*height: 300px;*/
+    /*margin: 20px 0 0 20px;*/
+  /*}*/
+/*=======*/
+/*!*vista moviles*!*/
+/*>>>>>>> fc05fb676ef701cfb82249bb1acd336ec3b7505d*/
 
-.btn{
-  font-size: 20px;
-  border: 1px solid #e67e22;
-  padding: 10px 30px;
-  color: #e67e22;
-  text-decoration: none;
-  border-radius: 12px;
-  margin-right: 15px;
-}
+  /*.showcase .btn {*/
+    /*font-size: 10px;*/
+    /*margin-left: 20px;*/
+  /*}*/
 
-.button-awe{
-  margin-top: 10px;
-    margin:0 -650px;
-}
+  /*.showcase h1 {*/
+    /*font-size: 20px;*/
+  /*}*/
+  /*.header p {*/
+    /*font-size: 10px;*/
+  /*}*/
+/*}*/
+/*vista moviles*/
+/*@@media (max-width:768px) {
+  .showcase{
+    padding: 30px;
+    height: 750px;
+    margin-top: 100px;
+  }
 
-.btn-half:hover{
-  background-color: #e67e22;
-  color: white;
-  transition: all 0.5s ease-in;
+  .showcase img {
+    width: 90%;
+    height: 300px;
+    margin: 20px 0 0 20px;
+  }
 
-}
+  .showcase .btn {
+    font-size: 10px;
+    margin-left: 20px;
+  }
 
-.btn-full:hover{
-  background-color: #e67e22;
-  color: white;
-  transition: all 0.5s ease-in;
-
-}
-
-.fea p{
-
-
-text-align: justify;
-  font-size: 20px;
-width: auto;
-  margin-bottom: 40px;
-
-}
-
-
-
-h3:after{
-  width: 100px;
-  height: 2px;
-  background-color: #e67e22;
-  display: block;
-  content: " ";
-  margin:0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-
-.fea h3{
-  /*font-family: Poppiins;*/
-  font-family: "Times New Roman" !important;
-
-  margin-top: 80px;
-  margin-bottom: 30px;
-  margin:auto;
-  width: 70%;
-}
-
-
-
-
-.ram i{
-  font-size: 50px;
-  color: white;
-}
-.ram{
-  margin-top: 100px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../imgs/merma.jpg);
-  /*background-repeat: no-repeat;*/
-  height: 70vh;
-  background-position: center;
-  background-size: cover;
-  /*margin-top: 20px;*/
-  color: white;
-  margin-bottom: 100px;
-}
-
-.ram h3{
-  /*font-family: Poppiins;*/
-  margin-top: 80px;
-  margin-bottom: 30px;
-
-}
-
-.ram p{
-  text-align: justify;
-    font-size: 18px;
-  width: auto;
-    margin-bottom: 40px;
-}
-.ram h4{
-  font-family: "Times New Roman" !important;
-
-  margin-top: 200px;
-  margin-left: 20px;
-  color: white;
-}
-.ram .fa{
-  margin-left: -10px;
-}
-.ram img{
-  height: 400px;
-  float: right;
-  margin-top: 200px
-}
-
-.ram .btn{
-  font-size: 20px;
-  border: 1px solid #e67e22;
-  padding: 10px 30px;
-  color: #e67e22;
-  text-decoration: none;
-  border-radius: 12px;
-  /*margin-top: 1px;*/
-  margin-left: 10px;
-}
-
-.ram .btn-half:hover{
-  background-color: #e67e22;
-  color: white;
-  transition: all 0.5s ease-in;
-
-}
-
-
-
-.faq h3{
-  font-family: "Times New Roman" !important;
-  margin-top: 80px;
-  margin-bottom: 30px;
-  margin:auto;
-  width: 70%;
-}
-
-.faq p{
-  margin-top: 20px;
-text-align: justify;
-  font-size: 20px;
-width: auto;
-  margin-bottom: 40px;
-
-}
-
-
-/*botones faq*/
-
-
-div.tab {
-      font-family: "Times New Roman" !important;
-    /*font-size: 199px;*/
-    text-align: center;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    /*margin-left: 200px!important;*/
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-      font-family: "Times New Roman" !important;
- /*font-size: 199px;*/
-    text-align: center;
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    margin-left: 200px!important;
-}
-/*#tablinks{
-  text-align: center;
-  margin-left: 600px!important;
-}*/
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-      font-family: "Times New Roman" !important;
-
-    background-color: #ddd;
-    text-align: center;
-    margin-left: 200px!important;
-
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-      font-family: "Times New Roman" !important;
-
-    background-color: #ccc;
-    text-align: center;
-    margin-left: 200px!important;
-
-}
-/* Style the tab content */
-.tabcontent {
-    /*text-align: center;*/
-      font-family: "Times New Roman" !important;
-
-    margin-left: -23px;
-    margin-top: 20px;
+  .showcase h1 {
     font-size: 20px;
-    /*margin: auto;*/
-    display: none;
-    padding: 6px 12px;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
-    margin-left: 200px!important;
-}
+  }
+  .header p {
+    font-size: 10px;
+  }
 
-.tabcontent h5{
-      font-family: "Times New Roman" !important;
-
-    text-align: center;
-    /*margin-top: 20px;*/
-    font-size: 40px;
-    margin-left: -150px;
-}
-
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-/**/
-
-footer{
-  margin-top: 40px;
-  padding: 30px;
-  /*position:center;*/
-
-}
+}*/
