@@ -1,11 +1,20 @@
 
 body{
-   background-color: #fffafa!important;
+   background-color: white!important;
   margin-top: 90px;
   font-size: 16px;
   /*background-color: #E0E0E0;*/
 }
-
+h1:after{
+  width: 100px;
+  height: 2px;
+  background-color: #e67e22;
+  display: block;
+  content: " ";
+  /*margin:0 auto;*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 h1,h2,h3,h4,h5,h6 {
   font-family: "Times New Roman";
 }
