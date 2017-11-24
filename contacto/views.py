@@ -1,28 +1,23 @@
 from django.shortcuts import render, redirect
-from .forms import ContactForm
-
 from django.core.mail import EmailMessage
-from email.mime.image import MIMEImage
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+from .forms import ContactForm
 
 def contacto_view(request):
 
     if request.method == "POST":
         formulario = ContactForm(request.POST, request.FILES)
-        if formulario.is_valid():
-
+        if formulario.is_valid():	
             if 'docfile' in request.FILES:
-                img_data = request.FILES['docfile'].read()
-
-                msg = EmailMessage(formulario.cleaned_data['Titulo'], formulario.cleaned_data['Texto'], formulario.cleaned_data['Email'], ['outline.coding@gmail.com'])
-                msg.attach('imagen',img_data,'image/jpg')
+                img = request.FILES['docfile'].read()
+                texto = 'Email: '+formulario.cleaned_data['Email']+'\n'+'Nombre: '+formulario.cleaned_data['Nombre']+'\n\n'+ formulario.cleaned_data['Texto']
+                msg = EmailMessage(formulario.cleaned_data['Titulo'], texto, formulario.cleaned_data['Email'], ['pasteleriadc.tj@gmail.com'])
+                msg.attach('imagen',img,'image/jpg')
                 msg.send()
             else:
-                msg = EmailMessage(formulario.cleaned_data['Titulo'], formulario.cleaned_data['Texto'], formulario.cleaned_data['Email'], ['outline.coding@gmail.com'])
+                texto = 'Email: '+formulario.cleaned_data['Email']+'\n\n'+ formulario.cleaned_data['Texto']
+                msg = EmailMessage(formulario.cleaned_data['Titulo'], texto, to = ['pasteleriadc.tj@gmail.com'])
                 msg.send()
-
-    else:
-        formulario = ContactForm()
-
-    return render(request,'contacto.html', {'form': formulario})
+				
+    formulario = ContactForm()
+		
+    return render(request,'contacto.html', {'form': formulario}) 

@@ -1,0 +1,31 @@
+button.accordion {
+    background-color: #DDEEFC;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+    font-family: sans-serif;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #DDFCFC;
+}
+
+div.panel {
+    background: #ffffff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    font-size: 20px;
+    max-width:110;
+    max-height: inherit;
+    display: none;
+}
+
+.container {
+text-align: center;
+}

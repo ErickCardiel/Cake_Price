@@ -11,22 +11,21 @@
 
 body{
 
-  /*font-family:sans-serif bold;*/
-  background-color: white!important;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../imgs/color.jpg);*/
-  /*height:100vh;*/
+  font-family:sans-serif bold;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../imgs/cup.jpg);
+	height: 182vh;
   background-position:right;
   background-size: cover;
-  /*margin-bottom: -200px!important;*/
-  background-repeat: no-repeat;
-  margin-left: 80px!important;
+	/*margin-bottom: -200px!important;*/
+	background-repeat: no-repeat;
+	margin-left: 200px!important;
 
 }
 
 
 header{
   /*background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../imgs/food.jpg);*/
-  margin-right: 40px;
+
   margin-bottom: 150px;
 }
 
@@ -47,6 +46,60 @@ header{
 
 }
 
+.main-nav li{
+  display: inline-block;
+
+	/*font-family:sans-serif bold !important;*/
+  margin-left: 30px;
+  font-size: 25px ;
+  margin-top: 40px;
+	font-size-adjust: auto;
+	/*margin-right: -20px;*/
+}
+
+.main-nav li a{
+	font-family:sans-serif bold !important;
+	/*margin-right: 60px;*/
+	/*margin-left: 40px;*/
+
+  color: white;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+
+.logo img{
+  /*linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7))*/
+
+  height: 90px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 230px;
+  position: absolute;
+  margin-top: 20px;
+  -webkit-filter: brightness(85%); /* Safari 6.0 - 9.0 */
+   /*margin:auto;*/
+  transform: translate(-200%,0%);
+  /*left: 20%;*/
+}
+
+.logo img:hover{
+  color: #e67e22!important;
+  border-bottom: 2px solid #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 5px;
+}
+
+
+
+.main-nav li a:hover{
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 5px;
+}
+
 .btn{
   font-size: 20px;
   border: 1px solid #e67e22;
@@ -64,7 +117,7 @@ header{
 
 .btn-half:hover{
   background-color: #e67e22;
-  color: black;
+  color: white;
   transition: all 0.5s ease-in;
 
 }
@@ -144,7 +197,7 @@ header{
 	font-family: Copperplate !important;
 
 	margin-left:45px;
-	background-color:lightgray!important;
+	background-color:#e67e22;
 	background-size: 200px;
 	font-size:20px;
 	/*border: 1px solid #e67e22;*/
@@ -154,42 +207,6 @@ header{
 	border-color: darkblue;
 	margin-right: auto;
 	margin-left: 40px;
-  /*margin-right: 15px;*/
-	color: #0066ff;
-
-
-	/*margin-bottom:2000px;*/
-
-}
-
-.navbar-default{
-  background: none!important;
-  /*background-position: top;*/
-  border:0;
-  /*font-family:Poppins;*/
-  background-color: none;
-}
-
-.navbar-brand{
-  /*font-size: 20px;*/
-  /*color:#000 !important;*/
-  font-weight: bold;
-  /*background-color: white;*/
-}
-#back{
-	font-family: Copperplate !important;
-
-	margin-left:2px;
-  background-color:lightgray!important;
-	background-size: 200px;
-	font-size:20px;
-	/*border: 1px solid #e67e22;*/
-  padding: 10px 30px;
-  text-decoration: none;
-  border-radius: 12px;
-	border-color: darkblue;
-	margin-right: auto;
-	/*margin-left: 40px;*/
   /*margin-right: 15px;*/
 	color: #0066ff;
 
@@ -249,7 +266,7 @@ header{
 	/*font-size-adjust: 150px!important;*/
 	height:140px;
 	margin-top:50px;
-	margin-left:115px;
+	margin-left:45px;
 	margin-bottom: 20px;
 	border-radius: 1000px;
 
@@ -259,20 +276,9 @@ header{
 	background-color: transparent;
 	font-size:20px;
 }
-h1:after{
-  width: 100px;
-  height: 2px;
-  background-color: #e67e22;
-  display: block;
-  content: " ";
-  /*margin:0 auto;*/
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
 h2{
 font-family: "Times New Roman" !important;
- color: black!important;
+ color: white!important;
 	font-size:30px!important;
 	margin-left:10px!important;
 	margin-bottom: 20px!important;
@@ -280,10 +286,9 @@ font-family: "Times New Roman" !important;
 
 h1{
 	font-family: "Times New Roman"!important;
-	font-size: 50px !important;
-	color: black!important;
+	font-size: 60px !important;
+	color: white!important;
 	/*font-size:40px!important;*/
 	margin-left:10px!important;
 	margin-bottom: 80px!important;
-	margin-top: 170px!important;
 }
