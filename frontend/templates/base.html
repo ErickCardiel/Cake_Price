@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'imgs/favIcon.png' %}">
+	<link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div id = "myNavbar"class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Pastelería&nbspD&C</a>
+            </div>
+            <div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#showcase">Home</a></li>
+					<li><a target="_blank" href="https://www.facebook.com/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a></li>
+					<li><a href="/cotizaciones">Cotizaciones</a></li>
+					<li><a href="/contacto">Contactanos</a></li>
+					<li><a href="/faq">FAQ</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+
+	<section id="foot">
+        <footer>
+          <h5 class="text-center">Pastelería D&C Copyright &copy; 2017</h5>
+        </footer>
+     </section>
+
+</body>
+</html>

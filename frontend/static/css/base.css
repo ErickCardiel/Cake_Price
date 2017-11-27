@@ -1,0 +1,16 @@
+footer{
+  font-size: 10px;
+  padding: 30px;
+}
+
+.navbar-default{
+  background: #fff;
+  border:0;
+  font-family:Roboto;
+}
+
+.navbar-brand{
+  font-size: 20px;
+  color:#000 !important;
+  font-weight: bold;
+}
