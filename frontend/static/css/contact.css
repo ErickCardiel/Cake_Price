@@ -1,0 +1,23 @@
+body{
+  font-family:sans-serif bold;
+	height:100vh;
+  background-position:right;
+  background-size:contain;
+	background-repeat: no-repeat;
+	margin-left: 300px!important;
+}
+
+h1:after{
+  width: 100px;
+  height: 2px;
+  background-color: #e67e22;
+  display: block;
+  content: " ";
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#id_Texto {
+    width: 300px;
+    height: 200px;
+}
