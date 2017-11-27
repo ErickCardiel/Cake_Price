@@ -1,32 +1,25 @@
+from django.shortcuts import render, redirect
+from django.core.mail import EmailMessage
 from .forms import ContactForm
-from django.shortcuts import render
-from django import forms
-from django.core.mail import EmailMultiAlternatives
+
 
 def contacto_view(request):
-    info_enviado = False
-    email = ""
-    titulo = ""
-    texto = ""
-
     if request.method == "POST":
-        formulario = ContactForm(request.POST)
+        formulario = ContactForm(request.POST, request.FILES)
         if formulario.is_valid():
-            info_enviado = True
-            email = formulario.cleaned_data['Email'] #En mayuscula por que asi lo definimos en los forms
-            titulo = formulario.cleaned_data['Titulo']
-            texto = formulario.cleaned_data['Texto']
+            if 'docfile' in request.FILES:
+                img = request.FILES['docfile'].read()
+                texto = 'Email: ' + formulario.cleaned_data['Email'] + '\n' + 'Nombre: ' + formulario.cleaned_data[
+                    'Nombre'] + '\n\n' + formulario.cleaned_data['Texto']
+                msg = EmailMessage(formulario.cleaned_data['Titulo'], texto, formulario.cleaned_data['Email'],
+                                   ['pasteleriadc.tj@gmail.com'])
+                msg.attach('imagen', img, 'image/jpg')
+                msg.send()
+            else:
+                texto = 'Email: ' + formulario.cleaned_data['Email'] + '\n\n' + formulario.cleaned_data['Texto']
+                msg = EmailMessage(formulario.cleaned_data['Titulo'], texto, to=['pasteleriadc.tj@gmail.com'])
+                msg.send()
 
+    formulario = ContactForm()
 
-
-            to_admin = 'gato_ryuzaki@hotmail.com'
-            html_content = "Informacion recibida <br><br>**Mensaje** %s"%(texto)
-            msg = EmailMultiAlternatives('Asunto del correo',html_content,'from@server.com',[to_admin])
-            msg.attach_alternative(html_content,'text/html') #Defino el contenido como HTML
-            msg.attach_file(wea)
-            msg.mixed_subtype = 'related'
-            msg.send()
-    else:
-        formulario = ContactForm()
-    ctx = {'form': formulario,'email':email,'titulo':titulo,'texto':texto,'info_enviado':info_enviado}
-    return render(request,'contacto.html', ctx)
+    return render(request, 'contacto.html', {'form': formulario})

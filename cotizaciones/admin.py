@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tamano, TipoPan, AditivosPan, Cubierta, Relleno, Toppings, PreciosExtra
+from .models import *
 
 
 admin.site.register(Tamano),

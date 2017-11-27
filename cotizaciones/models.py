@@ -16,7 +16,6 @@ class TipoPan(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
     logo = models.CharField(max_length=1000)
-    # logo= models.CharField(max_length=1000)
 
     def __str__(self):
             return '[' + self.nombre + ']'
@@ -26,7 +25,6 @@ class AditivosPan(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
     logo= models.CharField(max_length=1000)
-    # logo = models.CharField(max_length=1000)
 
     def __str__(self):
             return '[' + self.nombre + ']'
@@ -37,7 +35,6 @@ class Cubierta(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
     logo= models.CharField(max_length=1000)
-    # logo = models.CharField(max_length=1000)
 
     def __str__(self):
             return '[' + self.nombre + ']'
@@ -46,7 +43,6 @@ class Relleno(models.Model):
     elID = models.PositiveSmallIntegerField()
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
-    # logRel= models.ImageField(upload_to='rellenos', blank=True)
     logo = models.CharField(max_length=1000)
 
     def __str__(self):
@@ -58,7 +54,6 @@ class Toppings(models.Model):
     nombre = models.CharField(max_length=75)
     precio = models.FloatField()
     logo= models.CharField(max_length=1000)
-    # logo = models.CharField(max_length=1000)
 
     def __str__(self):
             return '[' + self.nombre + ']'

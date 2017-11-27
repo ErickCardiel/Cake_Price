@@ -3,6 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    #url(r'^$', views.muestraTemplate, name='envie'),
-    url(r'^$',views.muestraAditivos, name='enviar'),
+    url(r'^$',views.muestraInterfaz, name='interfazCotizar'),
 ]

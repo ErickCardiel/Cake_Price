@@ -5,7 +5,7 @@ from django.template import RequestContext
 from django.template import loader
 from .models import *
 
-def muestraAditivos(request):
+def muestraInterfaz(request):
 
     tamano = Tamano.objects.all()
     tipoPan = TipoPan.objects.all()
@@ -14,8 +14,6 @@ def muestraAditivos(request):
     relleno = Relleno.objects.all()
     toppings = Toppings.objects.all()
     precioExtra = PreciosExtra.objects.all()
-
-
 
     template = loader.get_template('cotizar.html')
     context = {

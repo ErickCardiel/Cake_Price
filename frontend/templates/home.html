@@ -1,171 +1,109 @@
-{% load static %}
+{% extends "base.html" %}
+{% block title %}Pastelería{% endblock %}
+{% block head %}<link rel="stylesheet" href="static/css/home.css">{% endblock %}
+{% block content %}
 
+    <br><br><br>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="imgs/favIcon.png">
-    <link href="https://fonts.googleapis.com/css?family=Poppiins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500"rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-    <script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-    <title>Pasteleria</title>
-  </head>
-  <body>
-
-    <header>
-      <!-- barra de menu -->
-      <div class="row">
-        <div class="logo">
-          <img src="{% static 'imgs/pitospitos.png' %}">
-        </div>
-        <div class="container">
-          <ul class="main-nav">
-            <li><a href="#fea">Nosotros <i class="fa fa-birthday-cake"></i></a></li>
-            <li><a href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galería <i class="fa fa-facebook-official"></i></a></li>
-            <li><a href="/cotizaciones/">Cotización <i class="fa fa-money"></i></a></li>
-            <li><a href="/contacto/">Contáctanos <i class="fa fa-envelope-o"></i></a></li>
-            <li><a href="#faq">FAQ <i class="fa fa-comments"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- logo pendejo y mas babosadas  -->
+    <section id="showcase">
       <div class="container">
-        <div class="hero">
-          <h1>Pastelería<p>D&C</p></h1>
-          <div class="button-awe">
-            <a href="/contacto/"class="btn btn-half">Contáctanos</a>
-            <a href="/cotizaciones/"class="btn btn-full">Cotizar</a>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="showcase-left">
+				<img src="{{'static/imgs/homePastelRosa.jpg' }}">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="showcase-right">
+              <h1>Nosotros</h1>
+              <p class="text-justify">Somos un pequeño negocio de pasteles que busca facilitar la vida de nuestros
+			  clientes mediante la preparación de cualquier pastel que desee a un precio economico, eso sin descuidar
+			  el gran sabor y la calidad de nuestros pasteles. Para nosotros lo más importante es garantizar la
+			  higiene en nuestro trabajo, el sabor, la apareciencia, la calidad en nuestros ingredientes, asi como
+              la confianza,honestidad y responsabilidad hacia nuestros clientes.</p>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <section id="fea"class="fea">
-      <!-- <div class="container"> -->
-        <h3 class="text-center">Nosotros</h3>
 
-        <div class="container">
-          <p class="text-center">Somos un pequeño negocio de pasteles que busca facilitar la vida de nuestros
-          clientes mediante la preparación de cualquier pastel que desee a un precio económico, eso sin descuidar
-          el gran sabor y la calidad de nuestros pasteles.Para nosotros lo más importante es garantizar la
-          higiene en nuestro trabajo, el sabor, la apariencia, la calidad en nuestros ingredientes, así como la confianza, honestidad y responsabilidad hacia nuestros clientes.
-          </p>
+    <hr>
+
+    <section id="info1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md6 col-sm-6">
+          <div class="info-left">
+            <h2>Galeria</h2>
+                   <p class="text-justify">¿Aún no te decides si quieres contratarnos para tu evento especial?
+                     Mira nuestra galeria de trabajos realizados dando click al siguiente enlace, y ¡convencete
+                     que somos tu mejor opción!</p>
+                     <a class="btn btn-default btn-1g info1-btn" href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a>
+          </div>
         </div>
-      </section>
+        <div class="col-md6 col-sm-6">
+          <div class="info-right">
+          <img src="{{'static/imgs/home3Pasteles.png'}}">
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
 
-      <section id="ram"class="ram">
+        <hr>
+
+    <section id="testimonial">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Galería <i class="fa fa-camera-retro"></i></h4>
-                <p class="pene" id="gal">¿Aún no te decides si quieres contratarnos para tu evento especial? Mira nuestra galería de trabajos realizados dando click al siguiente enlace, y ¡convencete que somos tu mejor opción!</p>
-                <a id="gal" class="btn btn-half" href="https://www.facebook.com/pg/Postres-y-Manualidades-DC-1107812365899116/photos/?ref=page_internal">Galeria</a>
+        	  <div class="row">
+              <div class="col-md-6 col-sm-6">
+                  <div class="testimonial-right">
+				<img src="{{'static/imgs/homeChef.jpg' }}">
             </div>
-            <div class="col-md-6">
-              <img src="{% static 'imgs/prueba2.png' %}">
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="testimonial-right">
+              <h2>Cotizaciones</h2>
+              <p class="text-justify">Utilice nuestra herramienta para cotizar un pastel, si desea algún diseño
+              en especifico no dude en enviarnos un mensaje desde nuestro formulario de contacto para contestarle a
+              la brevedad.</p>
+            <a class="btn btn-default btn-1g testimonial-btn" href="/cotizaciones">Cotizacion</a>
+            </div>
+          <br>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+   <hr>
+
+    <section id="info2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md6 col-sm-6">
+          <div class="info-left">
+            <h2 class="text-center">FAQ</h2>
+            <p class="text-center">¿Dónde estamos ubicados?¿métodos de pago?¿cómo hago un pedido? preguntas frecuentes en esta sección</p><br>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="/faq/">FAQ</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md6 col-sm-6 text-align:center">
+          <div class="info-right">
+            <h2 class="text-center">Contáctanos</h2>
+            <p class="text-center">¿Quiéres cotizar un pastel con un diseño especifico?¿tu duda no aparece en nuestro FAQ? ¡Contáctanos!</p><br>
+            <div class="form-actions">
+              <a class="btn btn-default btn-1g info2-btn " href="/contacto/">Contáctanos</a>
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="faq"class="faq">
-        <h3 class="text-center">Preguntas Frecuentes</h3>
-        <div class="container">
-          <p class="text-center">¿Dónde estamos ubicados?¿Métodos de pago?¿Cómo hago un pedido? Preguntas frecuentes en esta sección</p>
-        </div>
-      </section>
-      <section id="respuestas">
-
-          <div class="row">
-            <div class="col-md-3">
-              <h4>pene</h4>
-            </div>
-            <div class="col-md-3">
-              <h4>culo</h4>
-            </div>
-            <div class="col-md-3">
-              <h4>nena</h4>
-            </div>
-          </div>
-        <!-- </div> -->
-      </section>
-
-      <script>
-      window.sr = ScrollReveal();
-        sr.reveal('.navbar', {
-          duration: 2000,
-          origin:'bottom'
-        });
-      sr.reveal('.hero h1', {
-        duration: 2000,
-        delay: 500,
-        origin:'bottom',
-
-         });
+      </div>
+    </div>
+    </section>
 
 
-         sr.reveal('.fea', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-
-         sr.reveal('.btn-half', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-         sr.reveal('.btn-full', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-         sr.reveal('.pene', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-         sr.reveal('.ram gal', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-         sr.reveal('.ram h4', {
-           duration: 2000,
-           delay: 1000,
-           origin:'bottom',
-
-         });
-      </script>
-    <script>
-    $(function() {
-      // Smooth Scrolling
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-    </script>
-
-  </body>
-</html>
+    <hr>
+    <script type="text/javascript" src="/static/js/home.js"></script> <!--El script se carga al final del body, en el header no -->
+{% endblock %}
