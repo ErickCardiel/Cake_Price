@@ -52,7 +52,8 @@ $(document).on('ready',function()
     ({
         stop: function()
         {
-            $('.ui-selected').each(function(){
+            $('.ui-selected').each(function()
+            {
                stringPrecioSeleccion=$(this).text();
             });
             $('#seleccionActual').html(stringPrecioSeleccion);
@@ -83,7 +84,6 @@ function toggleShow(show)
         }
     }
 }
-
 
 function colocarMatriz()
 {
