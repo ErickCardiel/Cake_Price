@@ -187,6 +187,7 @@ function deshacerSeleccion()
         }
     }
 }
+    // document.getElementById('back').addEventListener('click',deshacerSeleccion);
 
 
 function eventoDrop(evento,ui)

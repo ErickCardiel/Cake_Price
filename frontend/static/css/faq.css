@@ -8,7 +8,7 @@ button.accordion {
     text-align: center;
     outline: none;
     font-size: 25px;
-    font-family: sans-serif;
+  font-family: Lato;
     transition: 0.4s;
 }
 
@@ -16,6 +16,9 @@ button.accordion.active, button.accordion:hover {
     background-color: #DDFCFC;
 }
 
+h1{
+     font-family: Arvo;
+}
 div.panel {
     background: #ffffff;
     padding: 50px 0 30px 0;
@@ -28,4 +31,8 @@ div.panel {
 
 .container {
 text-align: center;
+}
+p{
+      font-family: Josefin Slab;
+
 }

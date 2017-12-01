@@ -18,8 +18,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script src="http://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Slab" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
 	</head>
 	<body>
+    <div class="container">
 
 		<h1>Cotiza tu Pastel</h1>
 		<section id="Pasteles">
@@ -33,7 +38,7 @@
 			<ul id="listaTipoPan">
                 <h2>Tipo de pan</h2>
                 {% for p in tipoPan %}
-                    <li style="background: white"><span class="precio">{{p.precio}}</span><img src="{{ p.logo }}"><span class="txtNombre">{{p.nombre}}</span></li>
+                    <li class="text-center" style="background: white"><span class="precio">{{p.precio}}</span><img src="{{ p.logo }}"><span class="txtNombre">{{p.nombre}}</span></li>
                 {% endfor %}
 			</ul>
 
@@ -71,19 +76,21 @@
 
 
          <div id="pastel">
-            <img src="{% static 'imgs/cotizarDroppable.jpg' %}">
+            <img src="{% static 'imgs/open.png' %}">
             <br>
-             <button type="button" class="btn btn-default" onclick="deshacerSeleccion()">Regresar</button>
-             <a href="/contacto"> <button type="button" class="btn btn-default"><span>Total: $<span id='total'>0</span></span></button></a>
+{#             <button type="button" class="btn btn-default" onclick="deshacerSeleccion()">Regresar</button>#}
+{#             <a href="/contacto"> <button type="button" class="btn btn-default"><span>Total: $<span id='total'>0</span></span></button></a>#}
 {#             <button type="button" class="btn btn-default"><span>Total: $<span id='total'>0</span></span></button>#}
-
+            <span style="background-color: white"id="back" onclick="deshacerSeleccion()">Regresar</span>
+            <span style="background-color: white"id="precio">Total: $<span id='total'>0</span></span>
 
 {#            <div id="precio"><span>Total: $<span id='total'>0</span></span></div>#}
         </div>
 <br><br>
-        <label>Topping:</label>
-
-        <p id="seleccionActual"></p>
+{#        <label>Topping:</label>#}
+        <span style="background-color: white"id="back">Toppings: <span id='seleccionActual'></span></span>
+{#        <p id="seleccionActual"></p>#}
+    </div>
 	</body>
 </html>
 
