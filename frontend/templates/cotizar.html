@@ -57,6 +57,14 @@
                     <li style="background: white"><span class="precio">{{p.precio}}</span><img src="{{ p.logo }}"><span class="txtNombre">{{p.nombre}}</span></li>
                 {% endfor %}
 			</ul>
+			
+			
+			<ul id="listaRellenoFruta">
+                <h2>Rellenos de Fruta</h2>
+                {% for p in rellenoFruta %}
+                    <li style="background: white"><span class="precio">{{p.precio}}</span><img src="{{ p.logo }}"><span class="txtNombre">{{p.nombre}}</span></li>
+                {% endfor %}
+			</ul>
 
 
 			<ul id="listaCubierta">
@@ -86,9 +94,6 @@
 
 {#            <div id="precio"><span>Total: $<span id='total'>0</span></span></div>#}
         </div>
-    <ul id="listaSeleccion">
-
-    </ul>
 <br><br>
 {#        <label>Topping:</label>#}
         <span style="background-color: white"id="back">Toppings: <span id='seleccionActual'></span></span>
