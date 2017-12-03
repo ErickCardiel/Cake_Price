@@ -4,7 +4,7 @@ var multiplicadorTamano;
 var total = 0;
 var cnt = 0;
 var precioSelecciones = [];
-var listas = ['listaTamano','listaTipoPan','listaAditivos','listaRelleno','listaCubierta','listaToppings'];
+var listas = ['listaTamano','listaTipoPan','listaAditivos','listaRelleno','listaRellenoFruta','listaCubierta','listaToppings'];
 
 var bandera_topping=0;
 var tam;
@@ -36,6 +36,12 @@ $(document).on('ready',function()
     });
 
     $('#listaRelleno li').draggable
+    ({
+        helper:'clone',
+        revert: "invalid"
+    });
+	
+	$('#listaRellenoFruta li').draggable
     ({
         helper:'clone',
         revert: "invalid"
@@ -79,7 +85,7 @@ function toggleShow(show)
         else
         {
             $(document.getElementById(listas[show])).show();
-            if(show==5)
+            if(show==6)
                 colocarMatriz(); // Crea matriz de divs
         }
     }
@@ -168,9 +174,6 @@ function deshacerSeleccion()
 {
     if(cnt>0)
     {
-        var lista = document.getElementById("listaSeleccion");
-        lista.removeChild(lista.childNodes[cnt]);
-
         cnt--;
         toggleShow(cnt);
         if(cnt===0)
@@ -192,33 +195,19 @@ function deshacerSeleccion()
 }
     // document.getElementById('back').addEventListener('click',deshacerSeleccion);
 
+
 function eventoDrop(evento,ui)
 {
     var draggable = ui.draggable;
     var nuevoPrecio = parseFloat(draggable.children('.precio').text());
-
     cnt++;
     toggleShow(cnt);
-    if(parseFloat(draggable.children('.multiplicador').text())){
+    if(parseFloat(draggable.children('.multiplicador').text()))
         multiplicadorTamano = parseFloat(draggable.children('.multiplicador').text());
-
-        var item = document.createElement("li");
-        var itemtext = document.createTextNode(draggable.text());
-        var lista = document.getElementById("listaSeleccion");
-        item.appendChild(itemtext);
-        lista.appendChild(item);
-    }
-
 
     if(multiplicadorTamano&&nuevoPrecio)
     {
         precioSelecciones.push(nuevoPrecio);
         muestraPrecio();
-
-        var item = document.createElement("li");
-        var itemtext = document.createTextNode(draggable.children('.txtNombre').text());
-        var lista = document.getElementById("listaSeleccion");
-        item.appendChild(itemtext);
-        lista.appendChild(item);
     }
 }
