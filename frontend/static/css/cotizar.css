@@ -95,6 +95,17 @@ img{
 	 /*!*margin-bottom: 10px !important;*!*/
 	 /*color blue;*/
  /*}*/
+ 
+#listaRellenoFruta li{
+	border:1px solid;
+	display: inline-block;
+	height: 180px;
+	list-style: none;
+		margin-left: 50px !important;
+	margin-bottom: 10px;
+
+	width: 250px;
+}
 
 #listaToppings li{
 	border:1px solid;
@@ -135,6 +146,16 @@ img{
 }
 
 #listaRelleno img{
+	padding:20px 20px;
+	height:140px;
+}
+
+#listaRellenoFruta span{
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#listaRellenoFruta img{
 	padding:20px 20px;
 	height:140px;
 }
