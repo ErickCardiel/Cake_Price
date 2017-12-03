@@ -168,6 +168,9 @@ function deshacerSeleccion()
 {
     if(cnt>0)
     {
+        var lista = document.getElementById("listaSeleccion");
+        lista.removeChild(lista.childNodes[cnt]);
+
         cnt--;
         toggleShow(cnt);
         if(cnt===0)
