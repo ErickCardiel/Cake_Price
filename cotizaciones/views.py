@@ -12,6 +12,7 @@ def muestraInterfaz(request):
     aditivosPan = AditivosPan.objects.all()
     cubierta = Cubierta.objects.all()
     relleno = Relleno.objects.all()
+    rellenoFruta = RellenoFruta.objects.all()
     toppings = Toppings.objects.all()
     precioExtra = PreciosExtra.objects.all()
 
@@ -22,6 +23,7 @@ def muestraInterfaz(request):
         'aditivosPan': aditivosPan,
         'cubierta': cubierta,
         'relleno': relleno,
+		'rellenoFruta': rellenoFruta,
         'toppings': toppings,
         'precioExtra': precioExtra,
     }

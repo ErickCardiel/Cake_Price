@@ -47,6 +47,15 @@ class Relleno(models.Model):
 
     def __str__(self):
             return '[' + self.nombre + ']'
+			
+class RellenoFruta(models.Model):
+    elID = models.PositiveSmallIntegerField()
+    nombre = models.CharField(max_length=75)
+    precio = models.FloatField()
+    logo = models.CharField(max_length=1000)
+
+    def __str__(self):
+            return '[' + self.nombre + ']'
 
 
 class Toppings(models.Model):
