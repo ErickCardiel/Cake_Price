@@ -1,5 +1,3 @@
-# Django website 
-
 # Cotizar Pasteles
 
 ## Diagrama de casos de uso
@@ -17,7 +15,6 @@
 ## Historias de usuario
 
 [H.U.1.] - Servidor
-
 Como: Administrador.  
 Quiero: Tener montado un servidor.  
 Para: Subir el sitio web y que los clientes accedan a él por internet.
@@ -25,7 +22,6 @@ Para: Subir el sitio web y que los clientes accedan a él por internet.
   
 
 [H.U.2.] - Base de Datos
-
 Como: Administrador.  
 Quiero: Tener una base de datos.  
 Para: Administrar la información de los productos y características disponibles para los pasteles.
@@ -33,7 +29,6 @@ Para: Administrar la información de los productos y características disponible
   
 
 [H.U.3.]- Cotización de un pastel
-
 Como: Cliente.  
 Quiero: Conocer el precio de un pastel con ciertas características.  
 Para: Consultar el precio y decidir si realizar el pedido.
@@ -41,30 +36,25 @@ Para: Consultar el precio y decidir si realizar el pedido.
   
 
 [H.U.4.] - Editar productos y características.
-
 Como: Administrador.  
 Quiero: Editar los productos y características disponibles para un pastel.  
 Para: Tener actualizada la disponibilidad y precios, obteniendo el costo correcto de un pastel que es posible realizar.  
   
 
 [H.U.5.]- Enviar mensajes.
-
 Como: Cliente.  
 Quiero: Poder contactar al administrador desde el sitio web.  
 Para: Iniciar un pedido o resolver alguna duda.  
   
 
 [H.U.6.] - Galería.
-
 Como: Cliente.  
 Quiero: Consultar una galería de los trabajos realizados por la pastelería.  
 Para: Decidir si su trabajo es de mi agrado para realizar un pedido.  
   
 
 [H.U.7.] - Preguntas frecuentes
-
 Como: Administrador.
-
 Quiero: Que el sitio web contenga una sección con respuestas a las preguntas más comunes realizadas por los clientes.  
 Para: Evitar recibir y contestar mensajes con las mismas preguntas muchas veces.
 
@@ -72,13 +62,9 @@ Para: Evitar recibir y contestar mensajes con las mismas preguntas muchas veces.
   
   
   
-  
-  
 
 # Reporte Técnico
-
 ## Presentación de equipo y cliente
-
 ## Descripción del giro de la empresa/cliente
 
 Somos un pequeño negocio de pasteles que busca facilitar la vida de nuestros clientes mediante la preparación de cualquier pastel que desee a un precio económico, eso sin descuidar el gran sabor y la calidad de nuestros pasteles. Para nosotros lo más importante es garantizar la higiene en nuestro trabajo, el sabor, la apariencia, la calidad en nuestros ingredientes, así como la confianza,honestidad y responsabilidad hacia nuestros clientes.
