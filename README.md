@@ -94,8 +94,6 @@ Desarrollar una página de la pastelería donde exista una sección con todas la
 Fue utilizada la metodología de Scrum, realizando un calendario de todo el proyecto, para realizarlo fue necesario crear las historias de usuario, asignar pesos a cada una de ellas, fijar los criterios de aceptación, la duración de cada sprint etc.
 ![](https://lh6.googleusercontent.com/s-PmOIYzEcmVnhOFyG6OwRVztyn_wiq5C7qBr-B1OYmy-seyRCVz_bKr_SLT-EupXgeEsnSVNCX84jeFBUt4N3wRcdypG0IkhD0lF3rvHvd3rbjmJ-PYms7I2QJRlx_7XEVCGflZp2E)
 
-![](https://lh3.googleusercontent.com/GefCg9hQFc_uBPwtghfxD_0JXaSFknNN2I8LyD3KBA2RxcOYdk5nBL5rpAPNM1JVnCQohyYnBwpG9fa-5r0QCOK_t2735GtbohfCVioN9AkDnjI6gN0zF2ksUk9p0OBjxH36Y32_m8Y)
-
 ![](https://lh5.googleusercontent.com/kSp8iTpUM51mp1dvMzamlKxP65RdO82xpVMUrcvCWjbrRnEJOp0VS7Q97hqjhPJHyidak26yY-TFAySsFsdICpLO3ejIUfZP9w7LtMo_UxO2zsp-KwkYk11NQzFpypfwgTmH5MT36SM)**
 ![](https://lh3.googleusercontent.com/kf9iobsfUL5ep7zT1cio_KRyAwzkKSGB4Souof_FNC-RCZlM47ll6yg6Qm-DqpCRvC7Y_EWxQ7AniJxpYB8a86qReK2df_PPTWORiCQ70Lit4oUMTq0w5Vjg4AvfzPAHo3rWn89reDQ)**
 
